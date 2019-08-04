@@ -5,6 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20190731014639_EXtendedUserClass.cs" />
+    <Compile Remove="Migrations\20190731014639_EXtendedUserClass.Designer.cs" />
+    <Compile Remove="Migrations\20190804193059_ExtendedUserClass.cs" />
+    <Compile Remove="Migrations\20190804193059_ExtendedUserClass.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="wwwroot\" />
   </ItemGroup>
 

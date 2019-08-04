@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DatingAPP.API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20190731014639_EXtendedUserClass")]
-    partial class EXtendedUserClass
+    [Migration("20190804195526_ExtendedUserClass")]
+    partial class ExtendedUserClass
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -41,7 +41,7 @@ namespace DatingAPP.API.Migrations
 
                     b.Property<bool>("IsMain");
 
-                    b.Property<int?>("UserId");
+                    b.Property<int>("UserId");
 
                     b.Property<string>("Utl");
 
@@ -90,9 +90,10 @@ namespace DatingAPP.API.Migrations
 
             modelBuilder.Entity("DatingAPP.API.Models.Photo", b =>
                 {
-                    b.HasOne("DatingAPP.API.Models.User")
+                    b.HasOne("DatingAPP.API.Models.User", "User")
                         .WithMany("Photos")
-                        .HasForeignKey("UserId");
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }

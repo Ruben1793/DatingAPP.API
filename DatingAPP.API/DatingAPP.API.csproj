@@ -9,6 +9,8 @@
     <Compile Remove="Migrations\20190731014639_EXtendedUserClass.Designer.cs" />
     <Compile Remove="Migrations\20190804193059_ExtendedUserClass.cs" />
     <Compile Remove="Migrations\20190804193059_ExtendedUserClass.Designer.cs" />
+    <Compile Remove="Migrations\20190804195526_ExtendedUserClass.cs" />
+    <Compile Remove="Migrations\20190804195526_ExtendedUserClass.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -19,7 +21,7 @@
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.1.1" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.9" />
   </ItemGroup>
 
 </Project>

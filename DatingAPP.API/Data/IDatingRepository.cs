@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DatingAPP.API.Data
 {
-    interface IDatingRepository
+    public interface IDatingRepository
     {
         void Add<T>(T entity) where T : class;
         void Delete<T>(T entity) where T : class;

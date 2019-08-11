@@ -39,9 +39,9 @@ namespace DatingAPP.API.Migrations
 
                     b.Property<bool>("IsMain");
 
-                    b.Property<int>("UserId");
+                    b.Property<string>("Url");
 
-                    b.Property<string>("Utl");
+                    b.Property<int>("UserId");
 
                     b.HasKey("Id");
 

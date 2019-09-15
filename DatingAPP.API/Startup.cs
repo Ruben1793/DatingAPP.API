@@ -70,7 +70,7 @@ namespace DatingAPP.API
                         }
                     });
                 });
-            }
+            } 
             //seeder.SeedUsers();
             app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             app.UseAuthentication();

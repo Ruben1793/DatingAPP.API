@@ -23,7 +23,7 @@ namespace DatingAPP.API.Helpers
         public string Gender { get; set; }
         public int MinAge { get; set; } = 10;
         public int MaxAge { get; set; } = 99;
-
-
+        public bool Likees { get; set; } = false;
+        public bool Likers { get; set; } = false;
     }
 }

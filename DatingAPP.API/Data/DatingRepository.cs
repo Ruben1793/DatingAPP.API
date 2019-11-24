@@ -75,7 +75,7 @@ namespace DatingAPP.API.Data
 
         private async Task<IEnumerable<int>> GetUserLikes(int id, bool likers) 
         {
-            var user = _context.Users.Include(x => x.Likers).Include(x => x.Likees).FirstOrDefault(u => u.Id == id);
+            var user = await _context.Users.Include(x => x.Likers).Include(x => x.Likees).FirstOrDefaultAsync(u => u.Id == id);
             if (likers)
             {
                 return user.Likers.Where(u => u.LikeeId == id).Select(i => i.LikerId);

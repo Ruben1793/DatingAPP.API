@@ -115,7 +115,7 @@ namespace DatingAPP.API.Data
                     break;
             }
             messages = messages.OrderByDescending(d => d.MessageSent);
-            throw new NotImplementedException();
+            return await PagedList<Message>.CreateAsync(messages, messageParams.PageNumber, messageParams.PageSize);
         }
 
         public Task<IEnumerable<Message>> GetMessageThread(int userId, int recipientId)

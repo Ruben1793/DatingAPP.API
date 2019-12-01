@@ -14,7 +14,7 @@ namespace DatingAPP.API.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     SenderId = table.Column<int>(nullable: false),
-                    RecipentId = table.Column<int>(nullable: false),
+                    RecipientId = table.Column<int>(nullable: false),
                     Content = table.Column<string>(nullable: true),
                     IsRead = table.Column<bool>(nullable: false),
                     DateRead = table.Column<DateTime>(nullable: true),
@@ -26,8 +26,8 @@ namespace DatingAPP.API.Migrations
                 {
                     table.PrimaryKey("PK_Messages", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Messages_Users_RecipentId",
-                        column: x => x.RecipentId,
+                        name: "FK_Messages_Users_RecipientId",
+                        column: x => x.RecipientId,
                         principalTable: "Users",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
